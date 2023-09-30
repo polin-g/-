@@ -1,0 +1,32 @@
+@model person_money.Models.Report
+
+
+<div>
+    <h4>Отчеты</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IncomesRep)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IncomesRep)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WastesRep)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WastesRep)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        
+    </dl>
+</div>
+<div>
+    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model?.Id">Редактировать</a> |
+        <a class="btn btn-dark" asp-action="Index">Назад к списку</a>
+</div>

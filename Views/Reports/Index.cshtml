@@ -1,0 +1,44 @@
+@model IEnumerable<person_money.Models.Report>
+
+
+<p>
+    <a class="btn btn-success" asp-action="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IncomesRep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WastesRep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncomesRep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WastesRep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+          
+            <td>
+                <a class="btn btn-dark" asp-action="Edit" asp-route-id="@item.Id">Редактировать</a> |
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Подробнее</a> | |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

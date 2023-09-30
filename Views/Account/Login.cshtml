@@ -1,0 +1,35 @@
+﻿@model person_money.ViewModels.LoginModel
+
+<body >
+    <form asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <section class="vh-100 gradient-custom">
+            <div class="container py-5 h-500 w-1000">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card bg-secondary text-white" style="border-radius: 1rem;">
+                            <div class="card-body p-5 text-center">
+                                <div class="mb-md-5 mt-md-4 pb-5">
+                                    <p class="text-white-50 text-uppercase mb-5">Вход в систему</p>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <input type="text" asp-for="Login" placeholder="Логин" class="form-control form-control-lg" />
+                                        <span asp-validation-for="Login" />
+                                    </div>
+                                    <div class="form-outline form-white mb-4">
+                                        <input asp-for="Password" class="form-control  form-control-lg" placeholder="Пароль" />
+                                        <span asp-validation-for="Password" />
+                                    </div>
+                                    <input type="submit" value="Войти" class="btn btn-outline-light btn-lg px-5" />
+
+                                </div>
+                                <a class="btn btn-dark text-center" asp-action="Register" asp-controller="Account">Регистрация</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </form>
+   
+</body>
